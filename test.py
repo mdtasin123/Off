@@ -197,49 +197,50 @@ user = []
 joker = []
 num = 0
 
+models1=requests.get("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").text.splitlines()
+
+
+#____________vivoDevices.txt______________________#
+models12=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/vivoDevices.txt").text.splitlines()
+
+#____________vivo2027Devices.txt______________________#
+models13=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/vivo2027Devices.txt").text.splitlines()
+
+#____________vivo20X259LDevices.txt______________________#
+models14=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/vivo%20X259LDevices.txt").text.splitlines()
+
+#____________realme Devices.txt______________________#
+models15=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/realmeDevices.txt").text.splitlines()
+
+#____________Poco Devices.txt______________________#
+models16=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/pocooDevices.txt").text.splitlines()
+
+#____________Oppo Devices.txt______________________#
+models17=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/oppoDevices.txt").text.splitlines()
+
+#____________OnePlus Devices.txt______________________#
+models18=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/one%2BDevices.txt").text.splitlines()
+
+#____________LG Devices.txt______________________#
+models19=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/LGDevices.txt").text.splitlines()
+
+#___________Samsung Devices.txt______________________#
+models20=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/SamsungDevices.txt").text.splitlines()
+
+
 
 
 #___________________________________
 models="""SM-M514B
-SM-K341S
-SM-Q541K
-SM-W259C
-SM-Q120M
-SM-O562P
-SM-C664V
-SM-J761U
-SM-C026X
-SM-R064N
-SM-B030Y
-SM-E617Q
-SM-K828N
-SM-V683M
-SM-Y419O
-SM-Q038O
-SM-T993G
-SM-E687K
-SM-N452F
-SM-O992N
-SM-Y736V
-SM-N226E
-SM-E736Y
-SM-Z320S
-SM-Z988V
-SM-L494T
-SM-C784O
-SM-U888H
-SM-Y968W
-SM-J153B
-SM-E985X
-SM-M879L
-SM-O512S
-SM-M332U
-SM-X180D
-SM-F164Q
-SM-Z433H
-SM-Y758Q
-SM-G862L
-SM-P081I""".splitlines()   
+SM-Z548R
+SM-T024E
+SM-S792R
+SM-Z821M
+SM-X741V
+SM-B656C
+SM-P185X
+SM-M415W
+SM-B637Y""".splitlines()   
 
 
 density = ["1.81","1.01","1.5","2.0","2.5","3.0", "3.72"]
@@ -744,7 +745,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/samsung;FBBD/samsung;FBPN/{FBPN};FBDV/{device};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/LG;FBBD/walton;FBPN/{FBPN};FBDV/{models19};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
