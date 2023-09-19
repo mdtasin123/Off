@@ -857,7 +857,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=1.80,width=1025,height=896};FBLC/pk_PK;FBCR/VIVA;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.Orca;FBDV/SM-G973;FBSV/14.0;FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=3.72,width=958,height=1190};FBLC/pk_PK;FBCR/EMOVIL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.Orca;FBDV/SM-N950;FBSV/12.8;FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
