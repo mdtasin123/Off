@@ -198,181 +198,68 @@ joker = []
 num = 0
 
 
-sim_id = ''
-android_version = subprocess.check_output('getprop ro.build.version.release',shell=True).decode('utf-8').replace('\n','')
-model = subprocess.check_output('getprop ro.product.model',shell=True).decode('utf-8').replace('\n','')
-build = subprocess.check_output('getprop ro.build.id',shell=True).decode('utf-8').replace('\n','')
-fblc = 'en_GB'
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-except:
-        fbcr = 'Zong'
-fbmf = subprocess.check_output('getprop ro.product.manufacturer',shell=True).decode('utf-8').replace('\n','')
-fbbd = subprocess.check_output('getprop ro.product.brand',shell=True).decode('utf-8').replace('\n','')
-fbdv = model
-fbsv = android_version
-fbca = subprocess.check_output('getprop ro.product.cpu.abilist',shell=True).decode('utf-8').replace(',',':').replace('\n','')
-fbdm = '{density=2.0,height='+subprocess.check_output('getprop ro.hwui.text_large_cache_height',shell=True).decode('utf-8').replace('\n','')+',width='+subprocess.check_output('getprop ro.hwui.text_large_cache_width',shell=True).decode('utf-8').replace('\n','')
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')
-        total = 0
-        for i in fbcr:
-                total+=1
-        select = ('1','2')
-        if select == '1':
-                fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-                sim_id+=fbcr
-        elif select == '2':
-                try:
-                        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[1].replace('\n','')
-                        sim_id+=fbcr
-                except Exception as e:
-                        fbcr = "Zong"
-                        sim_id+=fbcr
-        else:
-                fbcr = 'Zong'
-                sim_id+=fbcr
-except:
-        fbcr = "Zong"
-device = {
-        'android_version':android_version,
-        'model':model,
-        'build':build,
-        'fblc':fblc,
-        'fbmf':fbmf,
-        'fbbd':fbbd,
-        'fbdv':model,
-        'fbsv':fbsv,
-        'fbca':fbca,
-        'fbdm':fbdm}
-#------------------------------------------------------Random Ua--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-model = random.choice(['GT-1015','GT-1020','GT-1030','GT-1035','GT-1040','GT-1045','GT-1050','GT-1240','GT-1440','GT-1450','GT-18190','GT-18262','GT-19060I','GT-19082','GT-19083','GT-19105','GT-19152','GT-19192','GT-19300','GT-19505','GT-2000','GT-20000','GT-200s','GT-3000','GT-414XOP','GT-6918','GT-7010','GT-7020','GT-7030','GT-7040','GT-7050','GT-7100','GT-7105','GT-7110','GT-7205','GT-7210','GT-7240R','GT-7245','GT-7303','GT-7310','GT-7320','GT-7325','GT-7326','GT-7340','GT-7405','GT-7550   5GT-8005','GT-8010','GT-81','GT-810','GT-8105','GT-8110','GT-8220S','GT-8410','GT-9300','GT-9320','GT-93G','GT-A7100','GT-A9500','GT-ANDROID','GT-B2710','GT-B5330','GT-B5330B','GT-B5330L','GT-B5330ZKAINU','GT-B5510','GT-B5512','GT-B5722','GT-B7510','GT-B7722','GT-B7810','GT-B9150','GT-B9388','GT-C3010','GT-C3262','GT-C3310R','GT-C3312','GT-C3312R','GT-C3313T','GT-C3322','GT-C3322i','GT-C3520','GT-C3520I','GT-C3592','GT-C3595','GT-C3782','GT-C6712','GT-E1282T','GT-E1500','GT-E2200','GT-E2202','GT-E2250','GT-E2252','GT-E2600','GT-E2652W','GT-E3210','GT-E3309','GT-E3309I','GT-E3309T','GT-G530H','GT-g900f','GT-G930F','GT-H9500','GT-I5508','GT-I5801','GT-I6410','GT-I8150','GT-I8160OKLTPA','GT-I8160ZWLTTT','GT-I8258','GT-I8262D','GT-I8268','GT-I8505','GT-I8530BAABTU','GT-I8530BALCHO','GT-I8530BALTTT','GT-I8550E','GT-i8700','GT-I8750','GT-I900','GT-I9008L','GT-i9040','GT-I9080E','GT-I9082C','GT-I9082EWAINU','GT-I9082i','GT-I9100G','GT-I9100LKLCHT','GT-I9100M','GT-I9100P','GT-I9100T','GT-I9105UANDBT','GT-I9128E','GT-I9128I','GT-I9128V','GT-I9158P','GT-I9158V','GT-I9168I','GT-I9192I','GT-I9195H','GT-I9195L','GT-I9250','GT-I9303I','GT-I9305N','GT-I9308I','GT-I9505G','GT-I9505X','GT-I9507V','GT-I9600','GT-m190','GT-M5650','GT-mini','GT-N5000S','GT-N5100','GT-N5105','GT-N5110','GT-N5120','GT-N7000B','GT-N7005','GT-N7100T','GT-N7102','GT-N7105','GT-N7105T','GT-N7108','GT-N7108D','GT-N8000','GT-N8005','GT-N8010','GT-N8020','GT-N9000','GT-N9505','GT-P1000CWAXSA','GT-P1000M','GT-P1000T','GT-P1010','GT-P3100B','GT-P3105','GT-P3108','GT-P3110','GT-P5100','GT-P5200','GT-P5210XD1','GT-P5220','GT-P6200','GT-P6200L','GT-P6201','GT-P6210','GT-P6211','GT-P6800','GT-P7100','GT-P7300','GT-P7300B','GT-P7310','GT-P7320','GT-P7500D','GT-P7500M','GT-P7500R','GT-P7500V','GT-P7501','GT-P7511','GT-S3330','GT-S3332','GT-S3333','GT-S3370','GT-S3518','GT-S3570','GT-S3600i','GT-S3650','GT-S3653W','GT-S3770K','GT-S3770M','GT-S3800W','GT-S3802','GT-S3850','GT-S5220','GT-S5220R','GT-S5222','GT-S5230','GT-S5230W','GT-S5233T','GT-s5233w','GT-S5250','GT-S5253','GT-s5260','GT-S5280','GT-S5282','GT-S5283B','GT-S5292','GT-S5300','GT-S5300L','GT-S5301','GT-S5301B','GT-S5301L','GT-S5302','GT-S5302B','GT-S5303','GT-S5303B','GT-S5310','GT-S5310B','GT-S5310C','GT-S5310E','GT-S5310G','GT-S5310I','GT-S5310L','GT-S5310M','GT-S5310N','GT-S5312','GT-S5312B','GT-S5312C','GT-S5312L','GT-S5330','GT-S5360','GT-S5360B','GT-S5360L','GT-S5360T','GT-S5363','GT-S5367','GT-S5369','GT-S5380','GT-S5380D','GT-S5500','GT-S5560','GT-S5560i','GT-S5570B','GT-S5570I','GT-S5570L','GT-S5578','GT-S5600','GT-S5603','GT-S5610','GT-S5610K','GT-S5611','GT-S5620','GT-S5670','GT-S5670B','GT-S5670HKBZTA','GT-S5690','GT-S5690R','GT-S5830','GT-S5830D','GT-S5830G','GT-S5830i','GT-S5830L','GT-S5830M','GT-S5830T','GT-S5830V','GT-S5831i','GT-S5838','GT-S5839i','GT-S6010','GT-S6010BBABTU','GT-S6012','GT-S6012B','GT-S6102','GT-S6102B','GT-S6293T','GT-S6310B','GT-S6310ZWAMID','GT-S6312','GT-S6313T','GT-S6352','GT-S6500','GT-S6500D','GT-S6500L','GT-S6790','GT-S6790L','GT-S6790N','GT-S6792L','GT-S6800','GT-S6800HKAXFA','GT-S6802','GT-S6810','GT-S6810B','GT-S6810E','GT-S6810L','GT-S6810M','GT-S6810MBASER','GT-S6810P','GT-S6812','GT-S6812B','GT-S6812C','GT-S6812i','GT-S6818','GT-S6818V','GT-S7230E','GT-S7233E','GT-S7250D','GT-S7262','GT-S7270','GT-S7270L','GT-S7272','GT-S7272C','GT-S7273T','GT-S7278','GT-S7278U','GT-S7390','GT-S7390G','GT-S7390L','GT-S7392','GT-S7392L','GT-S7500','GT-S7500ABABTU','GT-S7500ABADBT','GT-S7500ABTTLP','GT-S7500CWADBT','GT-S7500L','GT-S7500T','GT-S7560','GT-S7560M','GT-S7562','GT-S7562C','GT-S7562i','GT-S7562L','GT-S7566','GT-S7568','GT-S7568I','GT-S7572','GT-S7580E','GT-S7583T','GT-S758X','GT-S7592','GT-S7710','GT-S7710L','GT-S7898','GT-S7898I','GT-S8500','GT-S8530','GT-S8600','GT-STB919','GT-T140','GT-T150','GT-V8a','GT-V8i','GT-VC818','GT-VM919S','GT-W131','GT-W153','GT-X831','GT-X853','GT-X870','GT-X890','GT-Y8750'])
-gtt=random.choice(['GT-I9190','KOT49H','GT-I9192','KOT49H','GT-I9300I','KTU84P','GT-I9300','IMM76D','GT-I9300','JSS15J','GT-I9301I','KOT4','GT-I9301I','KOT49H','GT-I9500','JDQ39','GT-I9500','LRX22C','GT-N5100','JZO54K','GT-N7100','KOT49H','GT-N8000','JZO54K','GT-N8000','KOT49H','GT-P3110','JZO54K','GT-P5100','IML74K','GT-P5100','JDQ','GT-P5100','JDQ39','GT-P5100','JZO54K','GT-P5110','JDQ39','GT-P5200','KOT49H','GT-P5210','KOT49H','GT-P5220','JDQ39','GT-S7390','JZO54K','SAMSUNG','SM-A500F','SAMSUNG','SM-G532F','SAMSUNG','SM-G920F','SAMSUNG','SM-G935F','SAMSUNG','SM-J320F','SAMSUNG','SM-J510FN','SAMSUNG','SM-N920S','SAMSUNG','SM-T280','SM-A500FU','MMB29M','SM-A500F','LRX22G','SM-A500F','MMB29M','SM-A500H','MMB29M','SM-G900F','KOT49H','SM-G920F','MMB29K','SM-G920F','NRD90M','SM-G930F','NRD90M','SM-G935F','MMB29K','SM-G935F','NRD90M','SM-G950F','NRD90M','SM-J320FN','LMY47V','SM-J320F','LMY4','SM-J320F','LMY47V','SM-J320H','LMY47V','SM-J320M','LMY47V','SM-J510FN','MMB29M','SM-J510FN','NMF2','SM-J510FN','NMF26X','SM-J510FN','NMF26X;','SM-J701F','NRD90M;','SM-T111','JDQ39','SM-T230','KOT49H','SM-T231','KOT49H','SM-T235','KOT4''SM-T310','KOT49H','SM-T311','KOT4','SM-T311','KOT49H','SM-T315','JDQ39','SM-T525','KOT49H','SM-T531','KOT49H','SM-T531','LRX22G','SM-T535','LRX22G','SM-T555','LRX22G','SM-T561','KTU84P','SM-T705','LRX22G','SM-T705','LRX22G','SM-T805','LRX22G','SM*T820','NRD90M','SPH-L720','KOT49H'])
-density = random.choice(['4.0','3.0','2.75'])
-width = random.choice(['1080','720','1440','1980','2560','720'])
-height = random.choice(['2392','1776','2560','1612','2340','2408','1600','1520','960','1440','1280','4096','1920'])
-FBLC = random.choice(['es_ES','sl_SI','ms_MY','mk_MK','ne_NP','bn_IN','ar_AR','as_IN','bg_BG','bn_IN','bs_BA','ca_ES','da_DK','el_GR','en_GB','es_ES','es_LA','fa_IR','fi_FI','fr_CA','fr_FR','hi_IN','hr_HR','id_ID','it_IT','ko_KR','mk_MK','ms_MY','ne_NP','pl_PL','pt_BR','pt_PT','ro_RO','sl_SI','sr_RS','th_TH','vi_VN','zh_CN'])
-FBRV = '0'
-FBCR = random.choice(['Telenor','Zong','Grammenphone','UFONE-PAKTel','Banglalink','Vodafone'])
-FBMF = random.choice(['Xiaomi','Xiaomi'])
-FBBD = random.choice(['Xiaomi','Xiaomi'])
-FBPN = random.choice(['com.facebook.katana','com.facebook.lite','com.facebook.adsmanager','com.facebook.orca','com.facebook.mlite'])
-FBDV = 'Redmi Note 8T'
-FBSV = str(random.randint(1,19))
-FBOP = str(random.randint(1,19))
-FBCA = random.choice(['x86:arm64-v8a;','x64:armeabi-v7a;'])
-oppo = random.choice(['CPH1915','CPH2025','CPH1819','CPH2083','CPH1943','CPH2477'])
-d25 = random.choice(['CPH2071','CPH1827','CPH2209','CPH2161','SPH2209','CPH2095','CPH2069','PEAT00','CPH2185'])
-d26 = random.choice(['CPH2119','CPH2161','CPH2089','CPH1983','CPH2009','PEAM00','CPH1837','PERM00','CPH2137'])
-d262 = random.choice(['CPH2451','CPH2419','CPH2389','CPH2351','CPH2332','CPH2331','CPH2261','CPH2238','CPH2107','CPH2048','CPH1929','CPH1985','CPH1869','CPH1615','CPH1664','CPH1451','CPH1235','CPH1114'])
-d27 = random.choice(['22122RK93C','22041216C','2201117TY','2304FPN6DC','22101316UP','2206122SC','2106118C','21091116UI','M2105K81AC','M2101K6G','Redmi Note 10 Lite','M2003J15SC','MI CC9 Pro','2201116TG','22041216UC','21061119DG','Mi 9T','2304FPN6DG'])
-d28 = random.choice(['SM-A042F','SM-M136B','SM-A042M','SM-A047F','SM-M045F'])
-xa = random.choice(['MI CC9 Pro Premium Edition','Redmi Note 8 Pro','Mi Note 10','MI 8 Explorer Edition','Mi Note 10 Lite'])
-d30 = random.choice(['LMK420Y','LM-V600VML','LM-K315','LM-Q725S','LM-K315','LMK525','LMQ730HA','LM-Q925S','LMX440IM','LMQ730TM','LM-G910EMW','LM-X440ZM','LM-K315IM','LM-Q520N','LM-Q610','LM-Q630N','LMK610IM','LMX440ZM'])
-d31 = random.choice(['LMK520','Q710','LMV600VML','LM-X440ZM','LM-K610IM','LMK420H','LMK520, LM-K520','LM-Q610(FGN)','LMG910EMW','LM-K525'])
-vivo = random.choice(['vivo 1906','vivo 1938','vivo 1601','vivo 1920','vivo 1801','vivo 1935','vivo 1724','vivo 1901'])
-sony = random.choice(['XQ-BT44','XQ-AT52','XQ-BC52'])
-model1 = random.choice(['iQOO Z7 Pro','Realmi 7'])
-model1 = random.choice(['iQOO Z7 Pro','Realmi 7','Xiaomi_Mi_Mix_14','Motorola_Moto_G500'])
-model2  = random.choice(['Realme C55','Realme','Realme 9 pro+','Redmi A2+','OPPO Reno8 T','Realme narzo 50','Oppo A78','Redmi 12','Realme GT Neo 2','Redmi Note 12 Pro'])
-model3 = random.choice(['Xiaomi Redmi Note 11S','Vivo T2 Pro','Vivo V23e','Xiaomi Redmi Note 10 Pro','Xiaomi Poco X3 Pro','Oppo F17 Pro'])
-model4 = random.choice(['Infinix J582 Max','Realme 67','SM-S191ES','Mi X223 Max','Nokia NE312 Ultra','RMX7968','Nokia NJ590 Ultra','Honor 951 Max','Huawei S605P','SM-F696B','Nokia NP853 Ultra','Huawei 209T','Nokia Asha 331 Max','LG-591H','Redmi L305 Max','Redmi Note 626P','Redmi 538M','RMX1525','Sony Xperia P642 Pro','Oppo 964 Max','Nokia N412 Ultra','Infinix P643T','Sony Xperia 89Y','Honor Q219','Itel X559 Ultra','Sony Xperia 508T','Oppo K911T','Realme T250 Ultra','LM-R479G','Nokia NT419R','Realme H577T','Huawei Y446 Max','LM-27 Ultra','Vivo 190 Max','Itel W451J'])
-mixmodel = random.choice(['Acer','Alcatel','Allview','Amazon','Amoi','Apple','Archos','Asus','At&T','Benefon','Benq','Benq-siemens','Bird','Blackberry','Blackview','Blu','Bosch','Bq','Casio','Cat','Celkon','Chea','Coolpad','Cubot','Dell','Doogee','Emporia','Energizer','Ericsson','Eten','Fairphone','Fujitsu Siemens','Garmin-asus','Gigabyte','Gionee','Google','Haier','Honor','Hp','Htc','Huawei','I-mate','I-mobile','Icemobile','Infinix','Innostream','Inq','Intex','Itel','Jolla','Karbonn','Kyocera','Lava','Leeco','Lenovo','Lg','Maxon','Maxwest','Meizu','Micromax','Microsoft','Mitac','Mitsubishi','Modu','Motorola','Mwg','Nec','Neonode','Niu','Nokia','Nothing','Nvidia','O2','Oneplus','Oppo','Orange','Palm','Panasonic','Pantech','Parla','Philips','Plum','Posh','Prestigio','Qmobile','Qtek','Razer','Realme','Sagem','Samsung','Sendo','Sewon','Sharp','Siemens','Sonim','Sony','Sony Ericsson','Spice','T-mobile','Tcl','Tecno','Tel.Me.','Telit','Thuraya','Toshiba','Ulefone','Unnecto','Vertu','Verykool','Vivo','Vk Mobile','Vodafone','Wiko','Wnd','Xcute','Xiaomi','Xolo','Yezz','Yota','Yu','Zte'])
-
-modelname41 = random.choice(['iQOO','Realmi','Xiaomi','Motorola'])
-modelname1 = random.choice(['Doogee'])
-model121 = random.choice(['S110','S110','T10E','T20mini','T20S','T10S','N50','V30T','S100 Pro','V20 Pro','T30 Pro','X98 Pro','X98','S99','V Max','S100','V30','T20','T10','S96 GT'])
+#___________________________________
+models="""SM-M514B
+SM-K341S
+SM-Q541K
+SM-W259C
+SM-Q120M
+SM-O562P
+SM-C664V
+SM-J761U
+SM-C026X
+SM-R064N
+SM-B030Y
+SM-E617Q
+SM-K828N
+SM-V683M
+SM-Y419O
+SM-Q038O
+SM-T993G
+SM-E687K
+SM-N452F
+SM-O992N
+SM-Y736V
+SM-N226E
+SM-E736Y
+SM-Z320S
+SM-Z988V
+SM-L494T
+SM-C784O
+SM-U888H
+SM-Y968W
+SM-J153B
+SM-E985X
+SM-M879L
+SM-O512S
+SM-M332U
+SM-X180D
+SM-F164Q
+SM-Z433H
+SM-Y758Q
+SM-G862L
+SM-P081I""".splitlines()   
 
 
+density = ["1.81","1.01","1.5","2.0","2.5","3.0", "3.72"]
+width = [958,807,927,720,1716,1080,1440,1920,2560]
+height = [1100,1190,1151,1280, 1920, 2560, 3840, 4096]
+FBLC = ["pk_PK","es_MX","fr_FR","en_US","es_ES","de_DE","it_IT","ru_RU","zh_CN","ja_JP"]
+#FBPN= #["com.facebook.katana","com.facebook.lite","com.facebook.adsmanager","com.facebook.orca","com.facebook.mlite"]
+FBPN= ["com.facebook.katana","com.facebook.orca"]
+pakistani_sim_operators = ["Telekom HU","TELKOMSEL","Jazz","Telenor","Zong","Ufone","Warid Telecom","SCO","PTCL","Zong","Grammenphone","UFONE-PAKTel","Banglalink","Vodafone"]
+def generate_FBAN():
+  android_version=random.randint(3,14)
+  device=random.choice(models)
+  FBAV=f"{random.randint(150,500)}.0.0.{random.randint(1,999)}.{random.randint(1,999)}"
+  FBBV=random.randint(100000000,999999999)
+  FBCR=random.choice(pakistani_sim_operators)
+  
+  ua=f"[FBAN/FB4A;FBAV/{FBAV};FBBV/{FBBV};FBDM/"+"{density=2.1,width=1980,height=680}"+f";FBLC/np_NP;FBRV/0;FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/{device};FBSV/{android_version};FBOP/1;FBCA/x32:armeabi-v7a;]"
+  return ua
 
-
-
-
-#-----------------------------------------------------#
-kkkkki = random.choice(['SM-G920F','NRD90M', 'SM-T535','LRX22G', 'SM-T231','KOT49H', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-N7100','KOT49H', 'SM-T561','KTU84P', 'GT-N7100','KOT49H', 'GT-I9500','LRX22C', 'SM-J320F','LMY47V', 'SM-G930F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X', 'GT-P5100','IML74K', 'SM-J320F','LMY47V', 'GT-N8000','JZO54K', 'SM-T531','LRX22G', 'SPH-L720','KOT49H', 'GT-I9500','JDQ39', 'SM-G935F','NRD90M', 'SM-T561','KTU84P', 'SM-T531','KOT49H', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'SM-A500FU','MMB29M', 'SM-A500F','MMB29M', 'SM-T311','KOT49H', 'SM-T531','LRX22G', 'SM-J320F','LMY47V', 'SM-J320FN','LMY47V', 'SM-J320F','LMY47V', 'GT-P5210','KOT49H', 'SM-T230','KOT49H', 'GT-I9192','KOT49H', 'SM-T235','KOT4', 'GT-N7100','KOT49H', 'SM-A500F','LRX22G', 'SM-A500F','MMB29M', 'GT-N7100','KOT49H', 'SM-G920F','MMB29K', 'SM-J510FN','NMF26X', 'GT-N8000','JZO54K', 'SM-J320FN','LMY47V', 'SM-J320FN','LMY47V', 'SM-A500H','MMB29M', 'GT-I9300','JSS15J', 'GT-I9500','LRX22C', 'SM-J320F','LMY4', 'SM-J510FN','NMF26X', 'SM-A500F','MMB29M', 'GT-N8000','KOT49H', 'SM-T561','KTU84P', 'SM-G900F','KOT49H', 'GT-S7390','JZO54K', 'SM-J320F','LMY47V', 'GT-P5100','JZO54K', 'SM-A500FU','MMB29M', 'SM-G930F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T561','KTU84P', 'GT-N8000','KOT49H', 'SM-T531','LRX22G', 'SM-J510FN','MMB29M', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5110','JDQ39', 'GT-I9301I','KOT49H', 'SM-A500F','LRX22G', 'SM-G930F','NRD90M', 'SM-T311','KOT4', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'SM-J320M','LMY47V', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'GT-I9192','KOT49H', 'SM-G935F','MMB29K', 'SM-J701F','NRD90M;', 'GT-I9301I','KOT4', 'SM-J320FN','LMY47V', 'SM-T111','JDQ39', 'SM-A500F','MMB29M', 'SM-J510FN','NMF2', 'SM-T705','LRX22G', 'SM-G920F','NRD90M', 'GT-N5100','JZO54K', 'GT-I9300I','KTU84P', 'GT-I9300I','KTU84P', 'GT-N8000','KOT49H', 'GT-N8000','KOT49H', 'SM-A500F','MMB29M', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5100','JDQ39', 'GT-I9300I','KTU84P', 'GT-N5100','JZO54K', 'GT-N8000','KOT49H', 'GT-I9500','LRX22C', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'GT-N8000','JZO54K', 'SM-T805','LRX22G', 'SM-T231','KOT49H', 'GT-N5100','JZO54K', 'SM-J320H','LMY47V', 'SM-T231','KOT49H', 'SM-G930F','NRD90M', 'SM-G935F','NRD90M', 'SM-T310','KOT49H', 'GT-N8000','KOT49H', 'GT-I9300I','KTU84P', 'SM-G920F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T705','LRX22G;', 'GT-P3110','JZO54K', 'GT-I9192','KOT49H', 'SM-J320F','LMY47V', 'SM-G920F','NRD90M', 'GT-I9300','IMM76D', 'SM-G950F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X;', 'SM-J701F','NRD90M', 'SM-A500F','LRX22G', 'SM-T231','KOT49H', 'SM-T311','KOT49H', 'SM-J320FN','LMY47V', 'GT-P5210','KOT49H', 'SM-T805','LRX22G', 'GT-I9500','LRX22C', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'GT-I9300','JSS15J', 'GT-N7100','KOT49H', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'SM-T315','JDQ39', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-P5220','JDQ39', 'SM-T525','KOT49H', 'SM-T555','LRX22G', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X;', 'SM-A500F','MMB29M', 'GT-I9192','KOT49H', 'GT-P5100','JDQ', 'SM-T311','KOT49H'])
-
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-
-FBAV_OPTIONS = ["", "YZWSES93", "4Q095MQG", "A1XDL5U4"]
-DENSITY_OPTIONS = ["1.5", "2.0", "2.5", "3.0"]
-WIDTH_OPTIONS = [720, 1080, 1440, 1920, 2560]
-HEIGHT_OPTIONS = [1280, 1920, 2560, 3840, 4096]
-FBLC_OPTIONS = ["fr_FR", "en_US", "es_ES", "de_DE", "it_IT", "ru_RU", "zh_CN", "ja_JP"]
-FBDV_OPTIONS = ["SM-N980BDS", "SM-G970F", "iPhone12,8", "HTC_U11", "Pixel_5", "Redmi_Note_9","SM-N980BDS", "SM-G970F", "iPhone12,8", "HTC_U11", "Pixel_5", "Redmi_Note_9",
-    "Galaxy_S21", "OnePlus_9", "Mi_11", "Poco_F3", "Xperia_1_III", "Mate_40_Pro",
-    "Moto_G60", "ZenFone_8", "Vivo_X60_Pro", "Nokia_X20", "Pixel_6", "Galaxy_S22",
-    "iPhone13,1", "Redmi_10", "Xperia_5_III", "OnePlus_9T", "Mi_11T_Pro", "Realme_GT",
-    "Xiaomi_Mi_12", "Oppo_F19", "LG_G9", "Sony_Xperia_10_IV", "Nokia_9_3", "OnePlus_10",
-    "Vivo_V21", "Xiaomi_Mi_11X", "Motorola_Moto_G100", "HTC_Desire_21", "Realme_X9",
-    "Nokia_X60", "Samsung_Galaxy_A32", "OnePlus_Nord_CE", "Sony_Xperia_1_IV", "Xiaomi_Mi_12T",
-    "Oppo_Reno_6", "Motorola_Moto_E7", "LG_Wing", "HTC_U20", "Realme_X7", "Nokia_X70",
-    "Vivo_Y53s", "Xiaomi_Mi_Mix_4", "Samsung_Galaxy_F42", "OnePlus_Nord_N10", "Sony_Xperia_5_IV",
-    "Xiaomi_Mi_12S", "Oppo_Reno_7", "Motorola_Moto_G200", "LG_Velvet", "HTC_Drive_7", "Realme_X8",
-    "Nokia_X80", "Vivo_Y73s", "Xiaomi_Mi_Mix_5", "Samsung_Galaxy_A42", "OnePlus_Nord_N100",
-    "Sony_Xperia_5A", "Xiaomi_Mi_12R", "Oppo_Reno_8", "Motorola_Moto_G300", "LG_Q6", "HTC_Drive_8",
-    "Realme_X9 Pro", "Nokia_X90", "Vivo_Y93s", "Xiaomi_Mi_Mix_6", "Samsung_Galaxy_F52",
-    "OnePlus_Nord_N200", "Sony_Xperia_5B", "Xiaomi_Mi_12T Pro", "Oppo_Reno_9", "Motorola_Moto_G400",
-    "LG_Q7", "HTC_Drive_9", "Realme_X10", "Nokia_X100", "Vivo_Y95s", "Xiaomi_Mi_Mix_7",
-    "Samsung_Galaxy_A52", "OnePlus_Nord_N300", "Sony_Xperia_5C", "Xiaomi_Mi_12U",
-    "Oppo_Reno_10", "Motorola_Moto_G500", "LG_Q8", "HTC_Drive_10", "Realme_X11", "Nokia_X110",
-    "Vivo_Y100s", "Xiaomi_Mi_Mix_8", "Samsung_Galaxy_F62", "OnePlus_Nord_N400", "Sony_Xperia_5D",
-    "Xiaomi_Mi_12V", "Oppo_Reno_11", "Motorola_Moto_G600", "LG_Q9", "HTC_Drive_11", "Realme_X12",
-    "Nokia_X120", "Vivo_Y110s", "Xiaomi_Mi_Mix_9", "Samsung_Galaxy_A62", "OnePlus_Nord_N500",
-    "Sony_Xperia_5E", "Xiaomi_Mi_12W", "Oppo_Reno_12", "Motorola_Moto_G700", "LG_Q10",
-    "HTC_Drive_12", "Realme_X13", "Nokia_X130", "Vivo_Y120s", "Xiaomi_Mi_Mix_10",
-    "Samsung_Galaxy_F72", "OnePlus_Nord_N600", "Sony_Xperia_5F", "Xiaomi_Mi_12X",
-    "Oppo_Reno_13", "Motorola_Moto_G800", "LG_Q11", "HTC_Drive_13", "Realme_X14", "Nokia_X140",
-    "Vivo_Y130s", "Xiaomi_Mi_Mix_11", "Samsung_Galaxy_A72", "OnePlus_Nord_N700",
-    "Sony_Xperia_5G", "Xiaomi_Mi_12Y", "Oppo_Reno_14", "Motorola_Moto_G900", "LG_Q12",
-    "HTC_Drive_14", "Realme_X15", "Nokia_X150", "Vivo_Y140s", "Xiaomi_Mi_Mix_12",
-    "Samsung_Galaxy_F82", "OnePlus_Nord_N800", "Sony_Xperia_5H", "Xiaomi_Mi_12Z",
-    "Oppo_Reno_15", "Motorola_Moto_G1000", "LG_Q13", "HTC_Drive_15", "Realme_X16",
-    "Nokia_X160", "Vivo_Y150s", "Xiaomi_Mi_Mix_13", "Samsung_Galaxy_A82", "OnePlus_Nord_N900",
-    "Sony_Xperia_5I", "Xiaomi_Mi_12ZA", "Oppo_Reno_16", "Motorola_Moto_G1100", "LG_Q14",
-    "HTC_Drive_16", "Realme_X17", "Nokia_X170", "Vivo_Y160s", "Xiaomi_Mi_Mix_14",
-    "Samsung_Galaxy_F92", "OnePlus_Nord_N1000", "Sony_Xperia_5J", "Xiaomi_Mi_12ZB",
-    "Oppo_Reno_17", "Motorola_Moto_G1200", "LG_Q15"]
-FBSV_OPTIONS = ["11", "12", "13", "14", "15", "16", "17"]
-FBOP_OPTIONS = ["4", "5", "6", "7", "8"]
-FBCA_OPTIONS = ["arm64-v8a", "armeabi-v7a", "x86", "x86_64", "armeabi"]
-
-def generate_user_agent():
-    fban_fbaa = random.choice(["FBAN", "FB4A"])
-    fbav = random.choice(FBAV_OPTIONS)
-    fbbv = random.randint(100000000, 999999999)
-    density = random.choice(DENSITY_OPTIONS)
-    width = random.choice(WIDTH_OPTIONS)
-    height = random.choice(HEIGHT_OPTIONS)
-    fbdm = f"/*{{density={density},width={width},height={height}}}"
-    fblc = random.choice(FBLC_OPTIONS)
-    fbrv = random.randint(100000000, 999999999)
-    fbcr = random.choice(["OPPO", "TECNO", "Realme", "Sony", "LG", "Nokia"])
-    fbmf = random.choice(["VIVO", "Apple", "Xiaomi", "OnePlus", "Motorola"])
-    fbbd = random.choice([    "Samsung", "Huawei", "iPhone", "Google", "ASUS", "Sony", "LG", "Xiaomi", "Motorola",
-    "Nokia", "Lenovo", "BlackBerry", "Oppo", "Vivo", "Realme", "OnePlus", "HTC",
-    "ZTE", "Meizu", "Infinix", "Tecno", "Xolo", "Micromax", "Honor", "Sharp", "Lenovo",
-    "Panasonic", "Asus", "Lava", "Gionee", "HMD_Global", "Honor", "LeEco", "Lenovo",
-    "Micromax", "Nubia", "Oppo", "Panasonic", "Realme", "Sharp", "Sony", "Vivo",
-    "Xiaomi", "Motorola", "Nokia", "Blackberry", "Google", "HTC", "LG", "Lenovo",
-    "OnePlus", "Realme", "Sony", "Vivo", "ZTE", "Alcatel", "Amazon", "Blackview",
-    "Blu", "Cubot", "Elephone", "Gigaset", "Hisense", "Infinix", "Karbonn", "Kazam",
-    "Kyocera", "Lephone", "Medion", "Meizu", "Micromax", "Nextbit", "Nubia", "NuVision",
-    "Obi", "Onida", "Oppo", "Palm", "Parla", "Poco", "Razer", "Realme", "Sanyo", "Spice",
-    "Tecno", "Verykool", "Vivo", "Wiko", "Xolo", "YU", "Zebra", "ZTE", "ZUK",
-    "QMobile", "Haier", "Tecno", "itel", "Telenor", "Nokia", "Infinix", "Motorola",
-    "OPhone", "Rivo", "VGO Tel", "G'Five", "Megagate", "Club Mobile", "Voice Mobile",
-    "Calme", "GFive", "HTC", "Honor", "LG", "Meizu", "OnePlus", "Oppo", "Realme", "Sony",
-    "Vivo", "Xiaomi", "ZTE"])
-    fbpn = "com.facebook.katana"
-    fbdv = random.choice(FBDV_OPTIONS)
-    fbsv = random.choice(FBSV_OPTIONS)
-    fbop = random.choice(FBOP_OPTIONS)
-    fbca = random.choice(FBCA_OPTIONS)
-    fbss = random.choice([random.randint(10, 20), ""])
-
-    user_agent = f"[{fban_fbaa}/;FBAV/{fbav};FBBV/{fbbv};FBAN/{fban_fbaa};FBAV/{fbav};FBBV/{fbbv};FBDM/{fbdm};FBLC/{fblc};FBRV/{fbrv};FBCR/{fbcr};FBMF/{fbmf};FBBD/{fbbd};FBPN/{fbpn};FBDV/{fbdv};FBSV/{fbsv};FBOP/{fbop};FBCA/{fbca};FBSS/{fbss};]"
+#____________________________________
 
 
 
@@ -857,7 +744,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=3.72,width=958,height=1190};FBLC/pk_PK;FBCR/EMOVIL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.Orca;FBDV/SM-N950;FBSV/12.8;FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/samsung;FBBD/samsung;FBPN/{FBPN};FBDV/{device};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
@@ -1000,7 +887,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.98,width=1532,height=832};FBLC/pk_PK;FBCR/TIGO;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.lite;FBDV/SM-T231;FBSV/11.9;FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.75,width=1080,height=2131};FBLC/en_US;FBRV/366716093;FBCR/Telenor;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 7;FBSV/10;FBBK/1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
