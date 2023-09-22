@@ -262,7 +262,7 @@ def generate_FBAN():
   return ua
 
 #____________________________________
-ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
+#ua_string = f'৳[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+৳'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
 
 
 
@@ -748,7 +748,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{fblc};FBRV/{fbrv};FBCR/{fbcr};FBMF/{fbmf};FBBD/{fbbd};FBPN/com.facebook.katana;FBDV/{FBDV};FBSV/{fbsv};FBOP/{FBOP};FBCA/{fbca};FBSS/{fbss};]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
