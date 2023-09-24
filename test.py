@@ -90,6 +90,8 @@ try:
     os.mkdir('/sdcard/GS-2X-IDS/LOCK IDS')
 except:
     pass 
+sys.stdout.write('\x1b[1;35m\x1b]2; GS2X \x07')
+print ('\033[1;36mSERVES CHECKING PLACE WAITING...\033[0;97m')
 
 
 EE = '\r\r\x1b[38;5;208m'
@@ -113,7 +115,7 @@ def real_time():
 def convert(cok):
     __for = 'datr=' + cok['datr'] + ';' + ('sb=' + cok['sb']) + ';' + ('fr=' + cok['fr']) + ';' + ('c_user=' + cok['c_user']) + ';' + ('xs=' + cok['xs'])
     return __for
-
+    
 ugen = []
 ugen2 = []
 ugen3 = []
@@ -197,9 +199,8 @@ user = []
 joker = []
 num = 0
 
-sys.stdout.write('\x1b[1;35m\x1b]2; GS2X \x07')
 
-models341=requests.get("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").text.splitlines()
+#models341=requests.g#et("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").t#ext.splitline৳s()
 
 
 
@@ -233,7 +234,8 @@ models18=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/
 
 #____________LG Devices.txt______________________#
 models19=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/LGDevices.txt").text.splitlines()
-
+os.system('clear')
+print('\n SERVES CHECKING DONE...')
 #___________Samsung Devices.txt______________________#
 models20=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/SamsungDevices.txt").text.splitlines()
 
