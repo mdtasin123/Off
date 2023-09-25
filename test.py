@@ -234,8 +234,8 @@ models18=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/
 
 #____________LG Devices.txt______________________#
 models19=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/LGDevices.txt").text.splitlines()
-os.system('clear')
-print('\n SERVES CHECKING DONE...')
+#os.system('clear')
+#print('\n৳ SERVES CHECKING DONE...')
 #___________Samsung Devices.txt______________________#
 models20=requests.get("https://raw.githubusercontent.com/mdtasin123/device/main/SamsungDevices.txt").text.splitlines()
 
@@ -259,8 +259,8 @@ density = ["1.81","1.01","1.5","2.0","2.5","3.0", "3.72"]
 width = [958,807,927,720,1716,1080,1440,1920,2560]
 height = [1100,1190,1151,1280, 1920, 2560, 3840, 4096]
 FBLC = ["pk_PK","es_MX","fr_FR","en_US","es_ES","de_DE","it_IT","ru_RU","zh_CN","ja_JP"]
-#FBPN= #["com.facebook.katana","com.facebook.lite","com.facebook.adsmanager","com.facebook.orca","com.facebook.mlite"]
-FBPN= ["com.facebook.katana","com.facebook.orca"]
+FBPN= ["com.facebook.katana","com.facebook.lite","com.facebook.orca","com.facebook.adsmanager","com.facebook.mlite"]
+#FBPN= ["com.facebook.katana","com.facebook.orca"]
 pakistani_sim_operators = ["Telekom HU","TELKOMSEL","Jazz","Telenor","Zong","Ufone","Warid Telecom","SCO","PTCL","Zong","Grammenphone","UFONE-PAKTel","Banglalink","Vodafone"]
 def generate_FBAN():
   android_version=random.randint(3,14)
