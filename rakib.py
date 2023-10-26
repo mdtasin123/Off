@@ -711,7 +711,7 @@ class crack:
                 gttt=str(random.choice(string.ascii_uppercase))+str(random.randrange(11,99))+str(''.join(random.choice(string.ascii_uppercase) for _ in range(random.choice(uo))))
                 net=random.choice(['ZONG', 'Jazz'])
                 #ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.75,width=1080,height=2131};FBLC/en_US;FBRV/366716093;FBCR/Telenor;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 7;FBSV/10;FBBK/1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
-                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/+str(height4)+;FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(brand11)+;FBBD/+str(brand11)+;FBPN/+str(FBPN)+;FBDV/+str(model11)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
+                ua_string = f'[FBAN/FB4A;FBAV/{application_version};FBBV/{application_version_code};FBDM/'+'{density=2.75,width=1080,height=2131};FBLC/+str(FBLC)+;FBRV/0;FBCR/+str(FBCR)+;FBMF/+str(brand11)+;FBBD/+str(brand11)+;FBPN/+str(FBPN)+;FBDV/+str(model11)+;FBSV/+str(FBSV)+;FBOP/+str(FBOP)+;FBDM/FBCA/+str(FBCA)+:]'
                 #ua_string = f'[FBAN/FB4A;FBAV/;{application_version};FBBV/{application_version}FBDM/'+'{density=2.8,width=1080,height=2280};FBLC/en_US;FBRV/89065505;FBCR/Google;FBMF/Google;FBBD/Google;FBPN/com.facebook.katana;FBDV/Pixel 4;FBSV/11;FBOP/1;FBCA/armeabi-v7a]'
                 device = str(uuid.uuid4())
                 adid = str(uuid.uuid4())
